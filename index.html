@@ -3,58 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pricing Cards</title>
-
+    <title>SaaS Pricing Pro</title>
     <link rel="stylesheet" href="style.css">
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+<body class="light-mode">
 
-<body>
-
-<div class="pricing-container">
-
-    <!-- Basic -->
-    <div class="card">
-        <h2>Basic</h2>
-        <p class="price">$9/mo</p>
-        <ul>
-            <li>✔ Core features</li>
-            <li>✔ Email support</li>
-            <li>✔ Limited storage</li>
-        </ul>
-        <button class="btn">Get Started</button>
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="mode-slider round">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+            </div>
+        </label>
     </div>
 
-    <!-- Pro -->
-    <div class="card pro">
-        <div class="badge">Most Popular</div>
-        <h2>Pro</h2>
-        <p class="price">$19/mo</p>
-        <ul>
-            <li>✔ All features</li>
-            <li>✔ Priority support</li>
-            <li>✔ Unlimited storage</li>
-        </ul>
-        <button class="btn">Get Started</button>
+    <div class="container">
+        <header class="fade-in">
+            <h1>Choose Your Plan</h1>
+            <p class="subtitle">Simple pricing for everyone</p>
+
+            <div class="toggle-container">
+                <span class="label">Monthly</span>
+                <label class="switch">
+                    <input type="checkbox" id="togglePrice">
+                    <span class="slider"></span>
+                </label>
+                <span class="label">Yearly <span class="save-badge">Save 20%</span></span>
+            </div>
+        </header>
+
+        <div class="pricing">
+            <div class="card fade-in">
+                <h2>Basic</h2>
+                <p class="price" data-month="9" data-year="90">$9/mo</p>
+                <ul>
+                    <li><i class="fas fa-check"></i> 3 GB Storage</li>
+                    <li><i class="fas fa-check"></i> Email Support</li>
+                    <li><i class="fas fa-check"></i> Basic Features</li>
+                </ul>
+                <button class="btn">Get Started</button>
+            </div>
+
+            <div class="card pro fade-in">
+                <div class="badge">Most Popular</div>
+                <h2>Pro</h2>
+                <p class="price" data-month="19" data-year="190">$19/mo</p>
+                <ul>
+                    <li><i class="fas fa-check"></i> 10 GB Storage</li>
+                    <li><i class="fas fa-check"></i> Priority Support</li>
+                    <li><i class="fas fa-check"></i> All Features</li>
+                    <li><i class="fas fa-check"></i> Custom Domain</li>
+                </ul>
+                <button class="btn">Get Started</button>
+            </div>
+
+            <div class="card fade-in">
+                <h2>Premium</h2>
+                <p class="price" data-month="39" data-year="390">$39/mo</p>
+                <ul>
+                    <li><i class="fas fa-check"></i> Unlimited Storage</li>
+                    <li><i class="fas fa-check"></i> 24/7 Support</li>
+                    <li><i class="fas fa-check"></i> Premium Features</li>
+                </ul>
+                <button class="btn">Get Started</button>
+            </div>
+        </div>
     </div>
 
-    <!-- Premium -->
-    <div class="card">
-        <h2>Premium</h2>
-        <p class="price">$39/mo</p>
-        <ul>
-            <li>✔ Everything in Pro</li>
-            <li>✔ 24/7 support</li>
-            <li>✔ Early access</li>
-        </ul>
-        <button class="btn">Get Started</button>
-    </div>
-
-</div>
-
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>
